@@ -30,14 +30,13 @@
         <input type="text" id="location" name="location">
 
         <label for="logo">Logo</label>
-        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*" name="logo">
-
+        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
+               name="logo">
 
 
         <div class="div-button">
             <button class="login-button" type="submit">Submit</button>
         </div>
-
 
 
     </form>

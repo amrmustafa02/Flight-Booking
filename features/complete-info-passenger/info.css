@@ -42,23 +42,13 @@ body {
 .info-container input {
     height: 3vh;
     width: 80%;
-
     padding: 8px;
-    background: rgba(255, 255, 255, 0.09);
-    border-radius: 16px;
     font-size: 22px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     color: black;
-    transition: border-color 0.3s;
     /* Add transition for smooth effect */
 
 }
 
-.info-container input:hover {
-    border: 1px solid white;
-}
 
 
 .login-button {
