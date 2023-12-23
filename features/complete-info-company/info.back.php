@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = isset($_POST['address']) ? $_POST['address'] : "";
     $location = isset($_POST['location']) ? $_POST['location'] : "";
 //    $logo = isset($_FILES['logo']) ? $_FILES['logo']["name"] : "";
-
+ // TODO:take logo
 
 
 }
