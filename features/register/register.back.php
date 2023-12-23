@@ -28,6 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($count_email != 0) {
         $err = "email already exist";
+        echo "<p>$err</p>";
+        exit;
     }
 
     $hashedpass = password_hash($password, PASSWORD_DEFAULT);
@@ -43,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 
-
+    //TODO: go to home screen
   
 
    
