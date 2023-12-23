@@ -4,7 +4,6 @@ $err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $hashed_password = md5($password);
 
     // TODO:check user found in database
 
@@ -17,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // else
     // TODO:set err varaible with error get from database
     
-
 
 }
 ?>
