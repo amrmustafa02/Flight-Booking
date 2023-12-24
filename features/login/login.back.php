@@ -4,6 +4,7 @@ $err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $userType = $_POST['userType'];
 
     // TODO:check user found in database
 

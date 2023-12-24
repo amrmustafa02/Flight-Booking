@@ -35,7 +35,6 @@
                     <option style="color: black" value="passenger">Passenger</option>
                 </select>
             </label>
-
         </div>
 
         <div class="div-button">
