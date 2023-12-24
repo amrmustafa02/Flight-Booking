@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="info.css">
-    <title>Info</title>
+    <title>Passenger Info</title>
 
 </head>
 
@@ -16,32 +16,18 @@
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-        <label for="userName">User Name</label>
-        <input type="text" id="userName" name="userName">
+        <label for="photo">Photo</label>
+        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
+               name="photo">
 
-        <label for="bio">Bio</label>
-        <input type="text" id="bio" name="bio" required>
-
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" required>
-
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location">
-
-        <label for="logo">Logo</label>
-        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*" id="logo"
-               name="logo">
-
-<!--        <div class="upload-file-con" style="text-align: center">-->
-<!--            <input type="file" id="upload" hidden/>-->
-<!--            <label class="upload-file" for="upload">Choose file</label>-->
-<!--        </div>-->
+        <label for="passport">Passport Image</label>
+        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
+               name="passport">
 
 
         <div class="div-button">
             <button class="login-button" type="submit">Submit</button>
         </div>
-
 
 
     </form>

@@ -20,6 +20,16 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
+            <div>
+                <label>
+                    <select name="userType"
+                            style="background-color: transparent ;color: white ; border-radius: 15px; padding: 4px">
+                        <!-- <option selected disabled>Gander</option> -->
+                        <option style="color: black" selected value="company">Company</option>
+                        <option style="color: black" value="passenger">Passenger</option>
+                    </select>
+                </label>
+            </div>
             <div class="div-button">
                 <button class="login-button" type="submit">Login</button>
             </div>
