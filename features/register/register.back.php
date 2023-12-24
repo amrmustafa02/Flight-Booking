@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
-                setcookie('id', $companyID, time() + 3600, '/');
+                setcookie('id', $companyID, time() + 3600 * 24, '/');
                 UserData::$userId = $companyID;
                 echo UserData::$userId;
                 header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
