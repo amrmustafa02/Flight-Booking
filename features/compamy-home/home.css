@@ -1,0 +1,42 @@
+.home-button {
+    background-color: #146C94;
+    width: 8vw;
+    height: 4vw;
+    margin: 8px;
+    border-color: transparent;
+    color: white;
+    border-radius: 15px;
+}
+
+.home-button:hover {
+    background-color: white;
+    width: 8vw;
+    height: 4vw;
+    margin: 8px;
+    border-color: black;
+    color: black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.buttons-div {
+    display: flex;
+    align-items: center; /* Vertical centering */
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes the buttons to the right */
+}
+
+.company-logo {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.company-name {
+    font-size: 18px; /* Adjust as needed */
+    color: #333; /* Adjust text color as needed */
+}
