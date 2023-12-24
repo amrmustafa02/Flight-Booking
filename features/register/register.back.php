@@ -32,33 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Perform the insertion
     if ($userType == 'company') {
-        // $hu = "hello:";
-        // echo "<p>$hu</p>";
         $sql = "INSERT INTO company (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedpass', '$tel', '$userType')";
-        // $hu = "hello:";
-        // echo "<p>$hu</p>";
         $result = mysqli_query($conn, $sql);
-        // $hu = "hello:";
-        // echo "<p>$hu</p>";
         if ($result) {
-            // Retrieve the last inserted company ID
-            // $hu = "hello:";
-            // echo "<p>$hu</p>";
-            // echo "hello: " ;
             $result2 = mysqli_query($conn, "SELECT companyId FROM company ORDER BY companyId DESC LIMIT 1");
 
             if ($result2 && mysqli_num_rows($result2) > 0) {
-                // $hu = "hello:";
-                // echo "<p>$hu</p>";
                 $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
                 UserData::$userId = $companyID;
                 echo UserData::$userId;
-                // Set the company ID in the session
-                // $_SESSION['companyId'] = $companyID;
-                // echo "Company ID: " . $_SESSION['companyId'];
-
-
                  header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
                  exit();
             }
@@ -68,6 +51,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else if ($userType == 'passenger') {
         $sql = "INSERT INTO passenger (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedpass', '$tel', '$userType')";
         $result = mysqli_query($conn, $sql);
+        if ($result) {
+            $result2 = mysqli_query($conn, "SELECT passengerId FROM passenger ORDER BY passengerId DESC LIMIT 1");
+
+            if ($result2 && mysqli_num_rows($result2) > 0) {
+                $row = mysqli_fetch_assoc($result2);
+                $passengerID = $row['passengerId'];
+                UserData::$userId = $passengerID;
+                echo UserData::$userId;
+                 header("Location: ../complete-info-passenger/info.ui.php?id=" . urlencode($passengerID));
+                 exit();
+            }
+        }
     }
 
     // TODO: Redirect to the home screen or handle as needed
