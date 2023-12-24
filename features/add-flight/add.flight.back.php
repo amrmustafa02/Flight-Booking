@@ -16,6 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Perform any additional processing or validation as needed
 
     // Example: Display the retrieved data (you can replace this with your own logic)
+    $id = $_COOKIE['id'];
+    echo "Name: $id <br>";
+
     echo "Name: $name <br>";
     echo "ID: $id <br>";
     echo "Fees: $fees <br>";

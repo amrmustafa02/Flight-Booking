@@ -1,2 +1,5 @@
 <?php
- echo "<p>hi</p>";
+$id = $_COOKIE['id'];
+
+
+?>

@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Hash the password
-    $hashedpass=md5($password);
+    $hashedpass = md5($password);
 
     // Perform the insertion
     if ($userType == 'company') {
@@ -40,15 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
+                setcookie('id', $companyID, time() + 3600, '/');
                 UserData::$userId = $companyID;
                 echo UserData::$userId;
-                 header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
-                 exit();
+                header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
+                exit();
             }
         }
-    }
-
-    else if ($userType == 'passenger') {
+    } else if ($userType == 'passenger') {
         $sql = "INSERT INTO passenger (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedpass', '$tel', '$userType')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
@@ -59,12 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $passengerID = $row['passengerId'];
                 UserData::$userId = $passengerID;
                 echo UserData::$userId;
-                 header("Location: ../complete-info-passenger/info.ui.php?id=" . urlencode($passengerID));
-                 exit();
+                header("Location: ../complete-info-passenger/info.ui.php?id=" . urlencode($passengerID));
+                exit();
             }
         }
     }
 
     // TODO: Redirect to the home screen or handle as needed
 }
-?>
+
