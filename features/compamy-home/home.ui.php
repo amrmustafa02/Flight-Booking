@@ -11,7 +11,10 @@
     <div class="company-info">
         <span class="company-name">Your Company Name</span>
     </div>
-    <button class="home-button">Add Flight</button>
+    <form action="../add-flight/add.flight.ui.php">
+    <button type="submit" class="home-button">Add Flight</button>
+
+    </form>
     <button class="home-button">Messages</button>
     <button class="home-button">Profile</button>
 </div>
