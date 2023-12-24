@@ -31,7 +31,7 @@
 
         <label for="logo">Logo</label>
         <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
-               name="logo">
+               name="logoimg">
 
 
         <div class="div-button">
