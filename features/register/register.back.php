@@ -58,11 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // $_SESSION['companyId'] = $companyID;
                 // echo "Company ID: " . $_SESSION['companyId'];
 
-                // Redirect to the home screen
-                // header("Location: ../../index.php");
+
+                 header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
+                 exit();
             }
         }
-    } else if ($userType == 'passenger') {
+    }
+
+    else if ($userType == 'passenger') {
         $sql = "INSERT INTO passenger (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedpass', '$tel', '$userType')";
         $result = mysqli_query($conn, $sql);
     }

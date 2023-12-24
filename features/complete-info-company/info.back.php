@@ -4,6 +4,11 @@ session_start();
 include "../../connection.php";
 require_once '../../constant.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $receivedData = urldecode($_GET['id']);
+
+    echo "Data received: " . $receivedData;
+
     // Retrieve data from the form using the $_POST superglobal
     $username = isset($_POST['username']) ? $_POST['username'] : "";
     $bio = isset($_POST['bio']) ? $_POST['bio'] : "";
