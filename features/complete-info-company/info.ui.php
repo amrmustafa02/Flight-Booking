@@ -6,48 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="info.css">
     <title>Company Info</title>
-
 </head>
 
 <body>
+    <div class="info-container">
+        <h2 style="color: white; font-size: 30px;">Complete Info</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username">
 
-<div class="info-container">
+            <label for="bio">Bio</label>
+            <input type="text" id="bio" name="bio" required>
 
-    <h2 style="color: white; font-size: 30px;">Complete Info</h2>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
 
-    <form classaction="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location">
 
-        <label for="userName">User Name</label>
-        <input type="text" id="userName" name="userName">
+            <label for="logo">Logo</label>
+            <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
+                name="logoimg">
 
-        <label for="bio">Bio</label>
-        <input type="text" id="bio" name="bio" required>
+            <div class="div-button">
+                <button class="login-button" type="submit">Submit</button>
+            </div>
+        </form>
 
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" required>
-
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location">
-
-        <label for="logo">Logo</label>
-        <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
-               name="logo">
-
-
-        <div class="div-button">
-            <button class="login-button" type="submit">Submit</button>
-        </div>
-
-
-    </form>
-
-    <?php
-
-    include('info.back.php');
-
-    ?>
-
-</div>
+        <?php
+        include('info.back.php');
+        ?>
+    </div>
 </body>
 
 </html>
