@@ -22,9 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $count_email = mysqli_num_rows($result);
 
     if ($count_email != 0) {
-        $err = "Email already exists";
-        echo "<p>$err</p>";
-        exit;
+        $err = "email already exist";
+
+
+    
     }
 
     // Hash the password
@@ -64,6 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // TODO: Redirect to the home screen or handle as needed
+    //TODO: go to home screen
+  
+
+
 }
 
