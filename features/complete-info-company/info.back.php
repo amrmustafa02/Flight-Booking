@@ -16,7 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = isset($_POST['address']) ? $_POST['address'] : "";
     $location = isset($_POST['location']) ? $_POST['location'] : "";
     $logo = isset($_FILES['logo']) ? $_FILES['logo']["name"] : "";
+
     // Check if "logoimg" key exists in the $_FILES array
+
     if (isset($_FILES['logoimg']['error'])) {
         $uploadError = $_FILES['logoimg']['error'];
 
@@ -25,8 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // File Upload Handling for Logo
             $targetDirectory = "C:\\Users\\Nada\\Downloads";  // Specify your target directory for logos
+
             $targetFile = $targetDirectory . basename($_FILES["logoimg"]["name"]);
+
             $uploadOk = 1;
+
             $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
             // Check if the file is an actual image
@@ -63,10 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Sorry, your file was not uploaded.";
             } else {
                 if (move_uploaded_file($_FILES["logoimg"]["tmp_name"], $targetFile)) {
+
                     echo "The file " . basename($_FILES["logoimg"]["name"]) . " has been uploaded.";
 
                     // Update the database with the file path
                     $updateQuery = "UPDATE company SET username = '$username', bio = '$bio', address = '$address', location = '$location', logoimg = '$targetFile' WHERE companyId = $receivedData";
+
                     $updateResult = mysqli_query($conn, $updateQuery);
 
                     if ($updateResult) {
@@ -88,4 +95,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "No logo file submitted.";
     }
 }
-?>
+
