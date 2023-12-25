@@ -1,7 +1,7 @@
 <?php
 $err = "";
 include "../../connection.php";
-require_once '../../constant.php';
+
 // Check if the form is submitted
 
 
