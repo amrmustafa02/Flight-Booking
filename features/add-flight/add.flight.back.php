@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Example: Display the retrieved data (you can replace this with your own logic)
     $id = $_COOKIE['id'];
     echo "Name: $id <br>";
-
     echo "Name: $name <br>";
     echo "ID: $id <br>";
     echo "Fees: $fees <br>";
@@ -34,4 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // For security reasons, consider using prepared statements if interacting with a database.
 }
 
-?>
+
