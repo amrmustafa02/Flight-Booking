@@ -56,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $passengerID = $row['passengerId'];
+                setcookie('id', $passengerID, time() + 3600 * 24, '/');
                 // UserData::$userId = $passengerID;
                 // echo UserData::$userId;
                 header("Location: ../complete-info-passenger/info.ui.php?id=" . urlencode($passengerID));

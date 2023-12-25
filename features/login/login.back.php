@@ -24,8 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
-                UserData::$userId = $companyID;
-                echo UserData::$userId;
+                setcookie('id', $companyID, time() + 3600 * 24, '/');
                  header("Location: ../compamy-home/home.ui.php?id=" . urlencode($companyID));
                  exit();
             }
@@ -40,6 +39,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email']=$email;
             $val = "you are now logged in";
             echo "<p>$val</p>";
+            $result2 = mysqli_query($conn, "SELECT passengerId FROM passenger LIMIT 1");
+
+            if ($result2 && mysqli_num_rows($result2) > 0) {
+                $row = mysqli_fetch_assoc($result2);
+                $passengerID = $row['passengerId'];
+                setcookie('id', $passengerID, time() + 3600 * 24, '/');
+                //  header("Location: ../passenger-home/home.ui.php?id=" . urlencode($passengerID));
+                //  exit();
+            }
             
         }else{
             $err = "WRONG USERNAME/PASSWORD";

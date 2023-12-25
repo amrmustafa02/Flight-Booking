@@ -14,7 +14,7 @@
 <div class="info-container">
     <h2 style="color: white; font-size: 30px;">Complete Info</h2>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
 
         <label for="photo">Photo</label>
         <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
@@ -22,7 +22,7 @@
 
         <label for="passport">Passport Image</label>
         <input style="background-color: transparent; border-color: transparent" type="file" accept="image/*"
-               name="passport">
+               name="passportimg">
 
 
         <div class="div-button">
