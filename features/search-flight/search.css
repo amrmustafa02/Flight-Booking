@@ -1,0 +1,104 @@
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-pair {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-pair:last-child {
+    margin-right: 0;
+}
+
+.input-pair label {
+    color: black;
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.input-pair input {
+    width: 50%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    font-size: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid #146C94;
+    color: black;
+    transition: border-color 0.3s;
+}
+
+.input-pair input:hover {
+    border: 1px solid green;
+}
+
+
+.login-button {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 25%;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: #146C94;
+    color: white;
+    font-size: 18px;
+    height: 5vh;
+}
+
+.reserve-button {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 25%;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    height: 5vh;
+}
+
+.login-button:hover {
+    color: black;
+    border-color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.reserve-button:hover {
+    color: black;
+    border-color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

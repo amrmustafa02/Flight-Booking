@@ -1,6 +1,7 @@
 <?php
 $err = "";
 include "../../connection.php";
+
 // Check if the form is submitted
 
 
@@ -18,6 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email']=$email;
             $val = "you are now logged in";
             echo "<p>$val</p>";
+            $result2 = mysqli_query($conn, "SELECT companyId FROM company LIMIT 1");
+
+            if ($result2 && mysqli_num_rows($result2) > 0) {
+                $row = mysqli_fetch_assoc($result2);
+                $companyID = $row['companyId'];
+                UserData::$userId = $companyID;
+                echo UserData::$userId;
+                 header("Location: ../compamy-home/home.ui.php?id=" . urlencode($companyID));
+                 exit();
+            }
         }else{
             $err = "WRONG USERNAME/PASSWORD";
             echo "<p>$err</p>";
@@ -29,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email']=$email;
             $val = "you are now logged in";
             echo "<p>$val</p>";
+            
         }else{
             $err = "WRONG USERNAME/PASSWORD";
             echo "<p>$err</p>";
