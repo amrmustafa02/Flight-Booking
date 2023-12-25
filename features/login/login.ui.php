@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-
+    <title>Login</title>
 </head>
 
 <body>
@@ -14,10 +14,10 @@
         <h2 style="color: white; font-size: 30px;">Login</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         
-        <label for="email">Email:</label>
+        <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
         
-            <label for="password">Password:</label>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
             <div>
