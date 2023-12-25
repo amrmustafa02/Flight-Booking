@@ -2,7 +2,7 @@
 $err = "";
 session_start();
 include "../../connection.php";
-require_once '../../constant.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
