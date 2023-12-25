@@ -1,7 +1,6 @@
 <?php
 $err = "";
 include "../../connection.php";
-require_once '../../constant.php';
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     //get the currently logged name 
     $receivedData = urldecode($_GET['id']);
