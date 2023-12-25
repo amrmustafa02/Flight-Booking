@@ -23,6 +23,15 @@
 include "home.back.php";
 ?>
 
+
+    </form>
+    <button class="home-button">Messages</button>
+    <button class="home-button">Profile</button>
+</div>
+<?php
+   include "home.back.php";
+    ?>
+
 </body>
 
 </html>
