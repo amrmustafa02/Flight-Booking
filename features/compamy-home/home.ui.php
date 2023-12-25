@@ -9,28 +9,20 @@
 </head>
 
 <body>
-    <div class="buttons-div">
-        <div class="company-info">
-            <span class="company-name">Your Company Name</span>
-        </div>
-        <form action="../add-flight/add.flight.ui.php">
-            <button type="submit" class="home-button">Add Flight</button>
-        </form>
-        <button class="home-button">Messages</button>
-        <button class="home-button">Profile</button>
+<div class="buttons-div">
+    <div class="company-info">
+        <span class="company-name">Your Company Name</span>
     </div>
-<?php
-include "home.back.php";
-?>
-
-
+    <form action="../add-flight/add.flight.ui.php">
+        <button type="submit" class="home-button">Add Flight</button>
     </form>
     <button class="home-button">Messages</button>
     <button class="home-button">Profile</button>
 </div>
 <?php
-   include "home.back.php";
-    ?>
+include "home.back.php";
+?>
+
 
 </body>
 
