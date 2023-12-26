@@ -11,18 +11,24 @@
 <body>
 <div class="buttons-div">
     <div class="company-info">
-        <span class="company-name">Your Company Name</span>
+        <?php
+        include "home.header.back.php";
+        //?>
     </div>
     <form action="../add-flight/add.flight.ui.php">
         <button type="submit" class="home-button">Add Flight</button>
     </form>
-    <button class="home-button">Messages</button>
-    <button class="home-button">Profile</button>
+    <form action="../add-flight/add.flight.ui.php">
+        <button class="home-button">Messages</button>
+    </form>
+    <form action="../add-flight/add.flight.ui.php">
+        <button class="home-button">Profile</button>
+    </form>
 </div>
 <!--<img src="C:\xampp\htdocs\img\658a232626210.png" alt="">-->
 <?php
-include "home.back.php";
-?>
+//include "home.back.php";
+//?>
 
 
 </body>

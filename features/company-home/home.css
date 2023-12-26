@@ -21,22 +21,29 @@
 
 .buttons-div {
     display: flex;
-    align-items: center; /* Vertical centering */
+    align-items: center;
 }
 
 .company-info {
     display: flex;
     align-items: center;
-    margin-right: auto; /* Pushes the buttons to the right */
+    margin-right: auto;
 }
 
 .company-logo {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
-    margin-right: 10px; /* Adjust as needed */
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .company-name {
-    font-size: 18px; /* Adjust as needed */
-    color: #333; /* Adjust text color as needed */
+    font-size: 18px;
+    color: #333;
+}
+
+.image{
+    width: 20vw;
+    border-radius: 15px;
+    border-color: #146C94;
+    margin-right: 8px;
 }
