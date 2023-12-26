@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            
           </script>
           ";
-          header("Location: ../company-home/home.ui.php?id=" . urlencode($companyID));
+          header("Location: ../home-company/home.ui.php?id=" . urlencode($companyID));
             exit();
         }
       }
