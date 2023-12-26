@@ -50,12 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           // Update the database with the file path
                    $updateQuery = "UPDATE company SET username = '$username', bio = '$bio', address = '$address', location = '$location', logoimg = '$newImageName' WHERE companyId = $companyID";
                     $updateResult = mysqli_query($conn, $updateQuery);
-          echo
+echo
           "
           <script>
             alert('Successfully Added');
-           
-          </script>
+    
+</script>
           ";
           header("Location: ../home-company/home.ui.php");
             exit();
