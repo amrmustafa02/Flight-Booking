@@ -101,8 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            
           </script>
           ";
-        //   header("Location: ../compamy-home/home.ui.php?id=" . urlencode($passengerID));
-        //     exit();
+          header("Location: ../home-passenger/home.ui.php?id=" . urlencode($passengerID));
+            exit();
         }
       }
 
