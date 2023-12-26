@@ -24,8 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // check if email already exsit
     if ($count_email != 0) {
-        $err = "email already exist";
-        echo "<p>$err</p>";
+        $err = "Email already exist";
+        echo "<script>
+                alert('$err')
+              </script>";
+//        echo "<p style='color: black'>$err</p>";
         exit();
     }
 
@@ -38,12 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $result2 = mysqli_query($conn, "SELECT companyId FROM company ORDER BY companyId DESC LIMIT 1");
-
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
                 setcookie('id', $companyID, time() + 3600 * 24, '/');
-                header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
+                header("Location: ../complete-info-company/info.ui.php");
                 exit();
             }
         }
@@ -52,20 +54,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $result2 = mysqli_query($conn, "SELECT passengerId FROM passenger ORDER BY passengerId DESC LIMIT 1");
-
             if ($result2 && mysqli_num_rows($result2) > 0) {
                 $row = mysqli_fetch_assoc($result2);
                 $passengerID = $row['passengerId'];
                 setcookie('id', $passengerID, time() + 3600 * 24, '/');
-                // UserData::$userId = $passengerID;
-                // echo UserData::$userId;
-                header("Location: ../complete-info-passenger/info.ui.php?id=" . urlencode($passengerID));
+                header("Location: ../complete-info-passenger/info.ui.php");
                 exit();
             }
         }
     }
-
-    //TODO: go to home screen
 
 
 }

@@ -3,9 +3,10 @@ $err = "";
 include "../../connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     //get the currently logged name 
-    $receivedData = urldecode($_GET['id']);
-    $getname="SELECT name FROM company WHERE companyId= '$receivedData'";
-    $nameResult = mysqli_query($conn, $getname);
+    $receivedData = $_COOKIE['id'];
+    echo "<p>$receivedData</p>";
+    $getName = "SELECT name FROM company WHERE companyId= '$receivedData'";
+    $nameResult = mysqli_query($conn, $getName);
     if ($nameResult) {
         // Fetch the result
         $row = mysqli_fetch_assoc($nameResult);
@@ -17,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // Handle query error
         echo "Error retrieving name: " . mysqli_error($conn);
     }
-    $getlogo="SELECT logoimg FROM company WHERE companyId= '$receivedData'";
+    $getlogo = "SELECT logoimg FROM company WHERE companyId= '$receivedData'";
     $logoResult = mysqli_query($conn, $getlogo);
 
     if ($logoResult) {
@@ -32,9 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         echo "Error retrieving logo: " . mysqli_error($conn);
     }
 
-
-
 }
 
-?>
+
 
