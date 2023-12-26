@@ -58,5 +58,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo '</tbody>';
     echo '</table>';
-//    echo '</div>';
+    echo '</div>';
 }

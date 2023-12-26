@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("sissiissss", $companyId, $name, $itineraryFrom, $itineraryTo, $numberOfPassengers, $fees, $start_date, $end_date, $start_time, $end_time);
+    $stmt->bind_param("isssiissss", $companyId, $name, $itineraryFrom, $itineraryTo, $numberOfPassengers, $fees, $start_date, $end_date, $start_time, $end_time);
 
     if ($stmt->execute()) {
         echo "<p style='color: green;font-size: 22px'>Flight Added Successfully</p>";

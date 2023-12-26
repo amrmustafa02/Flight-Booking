@@ -1,0 +1,201 @@
+.home-button {
+    background-color: #146C94;
+    width: 8vw;
+    height: 4vw;
+    margin: 8px;
+    border-color: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/airplane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    background-position: center;
+}
+.home-button:hover {
+    background-color: transparent;
+    width: 8vw;
+    height: 4vw;
+    margin: 8px;
+    border-color: white;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.buttons-div {
+    display: inline-flex;
+    /*align-items: center;*/
+    text-align: center;
+    /*background-color: red;*/
+}
+
+.company-info {
+    /*display: flex;*/
+    align-items: center;
+    margin-right: auto;
+}
+
+.company-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 18px;
+    color: #333;
+}
+
+.image{
+    width: 10vw;
+    /*height: 50px;*/
+    border-radius: 15px;
+    border-color: #146C94;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-pair {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-pair:last-child {
+    margin-right: 0;
+}
+
+.input-pair label {
+    color: black;
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.input-pair input {
+    width: 50%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    font-size: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid #146C94;
+    color: black;
+    transition: border-color 0.3s;
+}
+
+.input-pair input:hover {
+    border: 1px solid green;
+}
+
+
+.login-button {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 25%;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: #146C94;
+    color: white;
+    font-size: 18px;
+    height: 5vh;
+}
+
+.reserve-button {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 25%;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    height: 5vh;
+}
+
+.login-button:hover {
+    color: black;
+    border-color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.reserve-button:hover {
+    color: black;
+    border-color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px white;
+}
+
+tr:nth-child(even) {
+    background-color: transparent;
+    color: white;
+}
+tr:nth-child(odd) {
+   color: white;
+    background-color: transparent;
+}
+.info-btn{
+    background-color: #146C94;
+    border-radius: 8px;
+    color: white;
+    margin: 4px;
+    font-size: 18px;
+    padding: 4px;
+    border-color: transparent;
+}
+.info-btn:hover{
+    background-color: transparent;
+    border-radius: 8px;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}

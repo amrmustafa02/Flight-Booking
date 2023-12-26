@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $row = mysqli_fetch_assoc($results);
             $companyID = $row['companyId'];
             setcookie('id', $companyID, time() + 3600 * 24, '/');
-            header("Location: ../company-home/home.ui.php");
+            header("Location: ../home-company/home.ui.php");
             exit();
         } else {
             $err = "WRONG USERNAME/PASSWORD";
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $row = mysqli_fetch_assoc($result2);
                 $passengerID = $row['passengerId'];
                 setcookie('id', $passengerID, time() + 3600 * 24, '/');
-                header("Location: ../passenger-home/home.ui.php");
+                header("Location: ../home-passenger/home.ui.php");
                 exit();
             }
 
