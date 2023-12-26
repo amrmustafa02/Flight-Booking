@@ -26,7 +26,37 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         echo "No results found.";
         $err = "";
     }
+// query for flights list
+    $sql = "SELECT * from flight where compId = '2' "; // $id
 
+    $result = mysqli_query($conn,$sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        // Fetch the rows and display the information
+        while ($row = mysqli_fetch_assoc($result)) {
+            //fadel logo
+            //  echo $row['imgLogo'] . "<br>";
+            echo $row['flightId'] . "<br>";
+            echo $row['name'] . "<br>";
+            echo $row['itineraryFrom'] . "<br>";
+            echo $row['itineraryTo'] . "<br>";
+            echo $row['numberOfPassengers'] . "<br>";
+            echo $row['registered_pass'] . "<br>";
+            echo $row['pending_pass'] . "<br>";
+            echo $row['fees'] . "<br>";
+            echo $row['start_date'] . "<br>";
+            echo $row['end_date'] . "<br>";
+            echo $row['start_time'] . "<br>";
+            echo $row['end_time'] . "<br>";
+
+            
+            // fadel hena flights list
+            echo "<hr>";
+        }
+    } else {
+        echo "No results found.";
+        $err = "";
+    }
 }
 
 ?>

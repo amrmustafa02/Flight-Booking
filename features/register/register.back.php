@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $companyID = $row['companyId'];
                 setcookie('id', $companyID, time() + 3600 * 24, '/');
                 header("Location: ../complete-info-company/info.ui.php?id=" . urlencode($companyID));
+               //header("Location: ../add-flight/add.flight.ui.php?id=" . urlencode($companyID));
                 exit();
             }
         }
