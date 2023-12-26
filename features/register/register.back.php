@@ -40,11 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO company (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedPass', '$tel', '$userType')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            if ($result && mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_assoc($result);
+            $result2 = mysqli_query($conn, "SELECT companyId FROM company ORDER BY companyId DESC LIMIT 1");
+            if ($result2 && mysqli_num_rows($result2) > 0) {
+                $row = mysqli_fetch_assoc($result2);
                 $companyID = $row['companyId'];
                 setcookie('id', $companyID, time() + 3600 * 24, '/');
-                header("Location: ../home-company/home.ui.php");
+                header("Location: ../complete-info-company/info.ui.php");
                 exit();
             }
         }
@@ -52,11 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO passenger (name, email, password, tel, userType) VALUES ('$name', '$email', '$hashedPass', '$tel', '$userType')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-            if ($result && mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_assoc($result);
+            $result2 = mysqli_query($conn, "SELECT passengerId FROM passenger ORDER BY passengerId DESC LIMIT 1");
+            if ($result2 && mysqli_num_rows($result2) > 0) {
+                $row = mysqli_fetch_assoc($result2);
                 $passengerID = $row['passengerId'];
                 setcookie('id', $passengerID, time() + 3600 * 24, '/');
-                header("Location: ../home-passenger/home.ui.php");
+                header("Location: ../complete-info-passenger/info.ui.php");
                 exit();
             }
         }
