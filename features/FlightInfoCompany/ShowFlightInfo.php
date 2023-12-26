@@ -1,6 +1,6 @@
 <?php
 
-include"./connection.php";
+include "../../connection.php";
 
 //Retrive flight details based on the ID sent via a URL Parameter
 if (isset($_GET['flight_id'])) {

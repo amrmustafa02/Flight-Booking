@@ -1,29 +1,41 @@
 <?php
 
-include"./connection.php";
+$err = "";
+include "../../connection.php";
+//for testing purpose
+//should get flight_id from the data im pressing cancel on 
+$flight_id = 1; // Replace with the actual flight ID or retrieve dynamically
+$passengerId = 4;
 
-//$flight_id = 4; // Replace with the actual flight ID or retrieve dynamically
-
-// Retrieve the flight ID from the form
-$flight_id = $_POST['flight_id'];
-
+$updatePassengerQuery = "UPDATE passenger SET flightId = $flight_id WHERE passengerId = $passengerId";
+$insertQuery = $conn->query($updatePassengerQuery);
 // Update Flight status to 'canceled'
 $update_flight_sql = "UPDATE flight SET cancelled = TRUE WHERE flightId = $flight_id";
+
 if ($conn->query($update_flight_sql) === TRUE) {
     echo "Flight canceled successfully<br>";
 
-$refund = "SELECT fees FROM flight WHERE flightId=$flight_id";
+    // Check refund amount
+    $refundQuery = "SELECT fees FROM flight WHERE flightId = $flight_id";
+    $refundResult = $conn->query($refundQuery);
 
- // Update Passenger account with refund 
-$update_passenger_sql = "UPDATE passengers SET account = account + $refund WHERE flightId = $flight_id";
+    if ($refundResult !== false && $refundResult->num_rows > 0) {
+        $row = $refundResult->fetch_assoc();
+        $refundAmount = $row['fees'];
+
+        echo "Refund Amount: $refundAmount<br>";
+
+        // Update Passenger account with refund
+        $update_passenger_sql = "UPDATE passenger SET account = account + $refundAmount WHERE flightId = $flight_id";
         if ($conn->query($update_passenger_sql) === TRUE) {
-            echo "Refund added to passengers' accounts<br>";
+            echo "Refund added to passengers' accounts: $refundAmount<br>";
         } else {
             echo "Error updating passenger accounts: " . $conn->error;
         }
-
-}
-else {
+    } else {
+        echo "Error retrieving refund amount: " . $conn->error;
+    }
+} else {
     echo "Error canceling flight: " . $conn->error;
 }
 
