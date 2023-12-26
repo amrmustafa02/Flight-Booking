@@ -147,18 +147,16 @@ body{
     background-color: white;
     cursor: pointer;
 }
-
 .table-container {
     display: flex;
+    margin: 10px;
     justify-content: center;
+    overflow-y: auto; /* Add this property to enable vertical scrolling */
+    max-height: 55vh; /* Adjust the max-height as needed */
 }
 
 table {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30vw;
+    width: 100%; /* Use 100% width to ensure the table fills the container */
     text-align: center;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;

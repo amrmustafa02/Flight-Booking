@@ -3,13 +3,13 @@ include "../../connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     $id = $_COOKIE['id'];
-    $sql = "select * from flight where compId = $id";// $id
+    $sql = "select * from flight where compId = $id"; // $id
     $result = mysqli_query($conn, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
         // Output the table header
-        echo "<div class='table-container' style='text-align: center; margin: 8px;center;width: 100%;justify-content: center'>";
-        echo "<table  style='width: 50%;'>
-                <tr>
+        echo "<div class='table-container' style='text-align: center; margin: 8px;width: 100%; overflow-x: auto;'>";
+        echo "<table style='width: 90%; margin: 8px; table-layout: fixed;'>
+        <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>From City</th>
@@ -27,19 +27,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "<td>" . $row["itineraryTo"] . "</td>";
             echo "<td>" . $row["fees"] . "</td>";
             echo "<td>
-                  <button class='info-btn'>
-                   Info
-                  </button>
-                  <button  class='info-btn'>
-                   Cancel
-                  </button>
-                  </td>";
+                <form action='flight-details.php' method='post' style='display: inline-block;'>
+                    <input type='hidden' name='flightId' value='" . $row["flightId"] . "'>
+                    <button type='submit' class='info-btn' name='action' value='info'>Info</button>
+                </form>
+                <form action='home.cancel.flight.php' method='post' style='display: inline-block;'>
+                    <input type='hidden' name='flightId' value='" . $row["flightId"] . "'>
+                    <button type='submit' class='info-btn' name='action' value='cancel'>Cancel</button>
+                </form>
+            </td>";
             echo "</tr>";
         }
 
         // Close the table
         echo "</table>";
         echo '</div>';
-
     }
 }
