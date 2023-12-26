@@ -27,7 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $logo = $row['logoimg'];
 
         // Echo the logo path
-        echo "<p>Logo: $logo</p>";
+        echo "<p>Name: $logo</p>";
+
+        // Corrected concatenation for the image source
+        echo '<img src="../../.images/' . $logo . '" >';
     } else {
         // Handle query error
         echo "Error retrieving logo: " . mysqli_error($conn);

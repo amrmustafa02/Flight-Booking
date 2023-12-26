@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $newImageName = uniqid();
           $newImageName .= '.' . $imageExtension;
     
-          move_uploaded_file($tmpName, 'C:\\Users\\Nada\\Downloads' . $newImageName);
+          move_uploaded_file($tmpName, '../../.images/' . $newImageName);
           // Update the database with the file path
                    $updateQuery = "UPDATE company SET username = '$username', bio = '$bio', address = '$address', location = '$location', logoimg = '$newImageName' WHERE companyId = $companyID";
                     $updateResult = mysqli_query($conn, $updateQuery);

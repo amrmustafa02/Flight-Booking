@@ -19,6 +19,7 @@
     <button class="home-button">Messages</button>
     <button class="home-button">Profile</button>
 </div>
+<!--<img src="C:\xampp\htdocs\img\658a232626210.png" alt="">-->
 <?php
 include "home.back.php";
 ?>
