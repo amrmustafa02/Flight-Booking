@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sql = "select * from flight where compId = $id"; // $id
     $result = mysqli_query($conn, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
-        // Output the table header
+
         echo "<div class='table-container' style='text-align: center; margin: 8px;width: 100%; overflow-x: auto;'>";
         echo "<table style='width: 90%; margin: 8px; table-layout: fixed;'>
         <tr>
@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <th>Action</th>
                 </tr>";
 
-        // Fetch the rows and display the information
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . $row["flightId"] . "</td>";
@@ -27,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "<td>" . $row["itineraryTo"] . "</td>";
             echo "<td>" . $row["fees"] . "</td>";
             echo "<td>
-                <form action='flight-details.php' method='post' style='display: inline-block;'>
+                <form action='flight.details.php' method='post' style='display: inline-block;'>
                     <input type='hidden' name='flightId' value='" . $row["flightId"] . "'>
                     <button type='submit' class='info-btn' name='action' value='info'>Info</button>
                 </form>
@@ -39,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "</tr>";
         }
 
-        // Close the table
         echo "</table>";
         echo '</div>';
     }

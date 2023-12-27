@@ -147,7 +147,6 @@ body{
     background-color: white;
     cursor: pointer;
 }
-
 .table-container {
     display: flex;
     margin: 10px;
@@ -197,4 +196,10 @@ tr:nth-child(odd) {
     color: white;
     border-color: white;
     cursor: pointer;
+    font-size: 18px;
+    text-align: start;
+}
+.text-profile{
+    color: white;
+    font-size: 18px;
 }

@@ -67,17 +67,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "<div class=\"div-button\">";
             echo "<button class=\"login-button\" type=\"submit\">Update</button>";
             echo "</div>";
-
         }
     } else {
         echo "No results found.";
         $err = "";
     }
-
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Handle form submission (update data in the database)
+
     $companyId = $_COOKIE['id'];
     $newName = $_POST['name'];
     $tel = $_POST['tel'];
@@ -87,15 +85,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = $_POST['address'];
     $username = $_POST['username'];
 
-    // Check if the email already exists
     $checkEmailQuery = "SELECT companyId FROM company WHERE email='$email' AND companyId != $companyId";
     $emailCheckResult = mysqli_query($conn, $checkEmailQuery);
 
     if ($emailCheckResult && mysqli_num_rows($emailCheckResult) > 0) {
-        // Email already exists for another company
+
         echo "<p style='color: red; font-size: 18px;'>Email already exists. Please choose a different email.</p>";
     } else {
-        // Perform the update query using the collected data
+
         $updateQuery = "UPDATE company SET 
             name='$newName',
             tel='$tel',
@@ -109,13 +106,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $updateResult = mysqli_query($conn, $updateQuery);
 
         if ($updateResult) {
-            echo "<p style='color: green; font-size: 24px;'>Data updated successfully</p>";
+            echo "<p style='color: white; font-size: 24px;'>Data updated successfully</p>";
         } else {
             echo "<p>Error updating data: " . mysqli_error($conn) . "</p>";
         }
     }
 }
-
-
-
-

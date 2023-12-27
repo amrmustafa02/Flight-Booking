@@ -1,3 +1,16 @@
+body {
+    text-align: center;
+    margin: 0;
+    /* color: #146C94; */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/airplane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    background-position: center;
+}
 
 .input-group {
     display: flex;
@@ -54,18 +67,6 @@
     height: 5vh;
 }
 
-.reserve-button {
-    text-align: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    width: 25%;
-    border-radius: 15px;
-    border-color: transparent;
-    background-color: green;
-    color: white;
-    font-size: 18px;
-    height: 5vh;
-}
 
 .login-button:hover {
     color: black;
@@ -83,22 +84,51 @@
 
 .table-container {
     display: flex;
+    margin: 10px;
     justify-content: center;
+    overflow-y: auto; /* Add this property to enable vertical scrolling */
+    max-height: 55vh; /* Adjust the max-height as needed */
 }
 
 table {
+    width: 100%; /* Use 100% width to ensure the table fills the container */
     text-align: center;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 90%;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 td, th {
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px white;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: transparent;
+    color: white;
+}
+tr:nth-child(odd) {
+   color: white;
+    background-color: transparent;
+}
+.info-btn{
+    background-color: #146C94;
+    border-radius: 8px;
+    color: white;
+    margin: 4px;
+    font-size: 18px;
+    padding: 4px;
+    border-color: transparent;
+}
+.info-btn:hover{
+    background-color: transparent;
+    border-radius: 8px;
+    color: white;
+    border-color: white;
+    cursor: pointer;
 }

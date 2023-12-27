@@ -13,17 +13,16 @@
     <div class="login-container">
         <h2 style="color: white; font-size: 30px;">Login</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        
-        <label for="email">Email</label>
+
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-        
+
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
             <div>
                 <label>
-                    <select name="userType"
-                            style="background-color: transparent ;color: white ; border-radius: 15px; padding: 4px">
+                    <select name="userType" style="background-color: transparent ;color: white ; border-radius: 15px; padding: 4px">
                         <!-- <option selected disabled>Gander</option> -->
                         <option style="color: black" selected value="company">Company</option>
                         <option style="color: black" value="passenger">Passenger</option>

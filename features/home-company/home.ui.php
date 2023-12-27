@@ -14,12 +14,13 @@
     include "home.header.back.php";
     ?>
 </div>
+
 <div class="buttons-div">
 
     <form action="../add-flight/add.flight.ui.php">
         <button type="submit" class="home-button">Add Flight</button>
     </form>
-    <form action="../add-flight/add.flight.ui.php">
+    <form action="../show-company-message/messages.php">
         <button class="home-button">Messages</button>
     </form>
     <form action="../profile-company/profile.ui.php">

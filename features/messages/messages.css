@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/airplane.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+    background-position: center;
+}
+
+input {
+    height: 10vh;
+    width: 40%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    font-size: 22px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+    transition: border-color 0.3s;
+}
+
+form{
+    text-align: center;
+    padding-top: 40vh;
+    justify-content: center;
+}
+.login-button {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 10%;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: #146C94;
+    color: white;
+    font-size: 18px;
+    height: 5vh;
+}
+
+.login-button:hover {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    height: 5vh;
+
+}
