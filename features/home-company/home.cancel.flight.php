@@ -64,21 +64,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 </head>
 
 <style>
-body{
-    text-align: center;
-    margin: 0;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/airplane.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(5px);
-    background-position: center;
-}
-h1{
-    color: white;
-}
+    body {
+        text-align: center;
+        margin: 0;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/airplane.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(5px);
+        background-position: center;
+    }
+
+    h1 {
+        color: white;
+    }
 </style>
 
 <body>

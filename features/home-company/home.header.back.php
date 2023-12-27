@@ -19,14 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $logoResult = mysqli_query($conn, $getlogo);
 
     if ($logoResult) {
-        // Fetch the result
+
         $row = mysqli_fetch_assoc($logoResult);
         $logo = $row['logoimg'];
 
         echo '<img class="image"  src="../../.images/' . $logo . '">';
-        echo "<h1 style='font-size: 30px; color: #dddddd'>$name</h1>";
+        echo "<h1 style='font-size: 30px; color: white'>$name</h1>";
     } else {
-        // Handle query error
+
         echo "Error retrieving logo: " . mysqli_error($conn);
     }
 

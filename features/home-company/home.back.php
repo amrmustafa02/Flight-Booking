@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <th>To City</th>
                     <th>Fees</th>
                     <th>Action</th>
-                </tr>";
+        </tr>";
 
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";

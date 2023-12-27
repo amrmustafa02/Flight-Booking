@@ -1,7 +1,17 @@
-body {
+.home-button {
+    background-color: #146C94;
+    width: 8vw;
+    height: 4vw;
+    margin: 8px;
+    border-color: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+body{
     text-align: center;
     margin: 0;
-    /* color: #146C94; */
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -11,6 +21,37 @@ body {
     backdrop-filter: blur(5px);
     background-position: center;
 }
+.home-button:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.buttons-div {
+    display: inline-flex;
+    text-align: center;
+}
+
+.company-info {
+    align-items: center;
+    margin-right: auto;
+}
+
+
+
+.company-name {
+    font-size: 18px;
+    color: white;
+}
+
+.image{
+    width: 10vw;
+    border-radius: 15px;
+    border-color: #146C94;
+}
+
 
 .input-group {
     display: flex;
@@ -75,23 +116,17 @@ body {
     cursor: pointer;
 }
 
-.reserve-button:hover {
-    color: black;
-    border-color: black;
-    background-color: white;
-    cursor: pointer;
-}
 
 .table-container {
     display: flex;
     margin: 10px;
     justify-content: center;
-    overflow-y: auto; /* Add this property to enable vertical scrolling */
-    max-height: 55vh; /* Adjust the max-height as needed */
+    overflow-y: auto; 
+    max-height: 55vh; 
 }
 
 table {
-    width: 100%; /* Use 100% width to ensure the table fills the container */
+    width: 100%; 
     text-align: center;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
@@ -108,14 +143,12 @@ td, th {
     border: 1px white;
 }
 
-tr:nth-child(even) {
+tr {
     background-color: transparent;
     color: white;
 }
-tr:nth-child(odd) {
-   color: white;
-    background-color: transparent;
-}
+
+
 .info-btn{
     background-color: #146C94;
     border-radius: 8px;

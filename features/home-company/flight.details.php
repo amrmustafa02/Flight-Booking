@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['flightId'])) {
                             FROM reservation
                             JOIN passenger ON reservation.passId = passenger.passengerID
                             WHERE reservation.flightId = $flightId";
-                            
+
         $reservationResult = mysqli_query($conn, $reservationQuery);
 
         if ($reservationResult && mysqli_num_rows($reservationResult) > 0) {

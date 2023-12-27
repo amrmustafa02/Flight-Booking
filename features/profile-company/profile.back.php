@@ -3,10 +3,10 @@
 include "../../connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $id = $_COOKIE['id'];
-    $sql = "select * from company where companyId = $id ";  // $id
+    $sql = "select * from company where companyId = $id ";  
     $result = mysqli_query($conn, $sql);
     if ($result && mysqli_num_rows($result) > 0) {
-        // Fetch the rows and display the information
+
         while ($row = mysqli_fetch_assoc($result)) {
 
 

@@ -23,9 +23,6 @@ body{
 }
 .home-button:hover {
     background-color: transparent;
-    width: 8vw;
-    height: 4vw;
-    margin: 8px;
     border-color: white;
     color: white;
     border-radius: 15px;
@@ -34,35 +31,25 @@ body{
 
 .buttons-div {
     display: inline-flex;
-    /*align-items: center;*/
     text-align: center;
-    /*background-color: red;*/
 }
 
 .company-info {
-    /*display: flex;*/
     align-items: center;
     margin-right: auto;
 }
 
-.company-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
+
 
 .company-name {
     font-size: 18px;
-    color: #333;
+    color: white;
 }
 
 .image{
     width: 10vw;
-    /*height: 50px;*/
     border-radius: 15px;
     border-color: #146C94;
-    margin-right: 8px;
-    margin-top: 8px;
 }
 
 
@@ -152,12 +139,12 @@ body{
     display: flex;
     margin: 10px;
     justify-content: center;
-    overflow-y: auto; /* Add this property to enable vertical scrolling */
-    max-height: 55vh; /* Adjust the max-height as needed */
+    overflow-y: auto; 
+    max-height: 55vh; 
 }
 
 table {
-    width: 100%; /* Use 100% width to ensure the table fills the container */
+    width: 100%; 
     text-align: center;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
@@ -174,14 +161,12 @@ td, th {
     border: 1px white;
 }
 
-tr:nth-child(even) {
+tr {
     background-color: transparent;
     color: white;
 }
-tr:nth-child(odd) {
-   color: white;
-    background-color: transparent;
-}
+
+
 .info-btn{
     background-color: #146C94;
     border-radius: 8px;

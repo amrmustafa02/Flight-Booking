@@ -31,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
             </tr>";
 
-        // Fetch the rows and display the information
-        while ($row = mysqli_fetch_assoc($result)) {
+
+            while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . $row["flightId"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
@@ -51,11 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo "</tr>";
         }
 
-        // Close the table
+
         echo "</table>";
         echo '</div>';
     } else {
-        // Handle query error
+
         echo "Error executing query: " . mysqli_error($conn);
     }
 }

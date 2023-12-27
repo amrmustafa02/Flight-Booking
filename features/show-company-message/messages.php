@@ -37,10 +37,8 @@
         <?php
         include "../../connection.php";
 
-        // Assuming you have the company ID
         $companyId = $_COOKIE['id'];
 
-        // Select messages sent to a specific company and include passenger data
         $query = "SELECT m.content, m.messageBy, p.name AS passengerName, p.email AS passengerEmail
                 FROM messages m
                 JOIN passenger p ON m.messageBy = p.passengerId
@@ -49,7 +47,6 @@
         $result = mysqli_query($conn, $query);
 
         if ($result) {
-            // Display the messages and passenger data in a loop
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<h1>Content: " . $row['content'] . "</h1>";
                 echo "<h1>Passenger Name: " . $row['passengerName'] . "</h1>";

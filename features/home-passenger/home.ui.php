@@ -11,6 +11,7 @@
     <?php
     include "home.header.back.php";
     ?>
+
     <div class="buttons-div">
         <form action="../search-flight/search.ui.php">
             <button type="submit" class="home-button">Search</button>
@@ -19,8 +20,10 @@
             <button class="home-button">Profile</button>
         </form>
     </div>
+
     <?php
     include "complet.flights.php";
     ?>
+    
 </body>
 </html>

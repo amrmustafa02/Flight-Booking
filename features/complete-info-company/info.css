@@ -14,7 +14,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     padding-top: 20px;
     padding-bottom: 20px;
     width: 25vw;
@@ -31,18 +30,14 @@ body {
     margin-left: 9%;
     margin-bottom: 10px;
     margin-top: 10px;
-
     text-align: start;
     font-size: 22px;
     color: white;
-    /* margin: 8px; */
-
 }
 
 .info-container input {
     height: 3vh;
     width: 80%;
-
     padding: 8px;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
@@ -51,9 +46,6 @@ body {
     backdrop-filter: blur(3.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: black;
-    transition: border-color 0.3s;
-    /* Add transition for smooth effect */
-
 }
 
 .info-container input:hover {
@@ -89,45 +81,4 @@ body {
 
 }
 
-.div-button {
-    width: 100%;
-    text-align: center;
-}
 
-.register-button {
-    margin: 16px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-
-}
-
-.register-button ::after {
-    margin: 12px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-
-}
-
-.register-button:hover {
-    margin: 12px;
-    background-color: transparent;
-    color: #146C94;
-    text-decoration: none;
-
-}
-
-.upload-file{
-    width: 50%;
-    background-color: indigo;
-    color: white;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-.upload-file-con{
-    display: block;
-    width: 100%;
-    text-align: center;
-    background-color: green;
-}
